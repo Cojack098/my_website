@@ -1,0 +1,21 @@
+
+.hero {
+    background: url('Images/bg.png') center/cover no-repeat;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); 
+}
+.product-card img {
+    height: 300px;
+    object-fit: cover;
+}
+footer {
+    background: black; 
+    color: lightgray;   
+    padding: 20px 0;
+    text-align: center;
+}

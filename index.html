@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanStyle - Clothing Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+ <style>
+  .hero {
+    background: url('Images/bg.png') center/cover no-repeat;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); 
+}
+.product-card img {
+    height: 450px;
+    object-fit: cover;
+}
+footer {
+    background: black; 
+    color: lightgray;   
+    padding: 20px 0;
+    text-align: center;
+}
+
+ </style>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Images/Logo.jpg" alt="UrbanStyle Logo" width="40" height="40" class="me-2">
+        UrbanStyle - Meregillano Clothing Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html">My Account</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero text-center">
+    <h1 class="display-4">Style Meets Comfort</h1>
+    <p class="lead">Discover the latest trends in streetwear fashion</p>
+    <a href="products.html" class="btn btn-primary btn-lg mt-3">Shop Now</a>
+  </header>
+   
+   <section class="py-5">
+    <div class="container">
+      <h2 class="bg-dark text-light text-center mb-5 py-2">Featured Items</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="Images/Classic White Tee.jpg" class="card-img-top" alt="Shirt 1">
+            <div class="card-body">
+              <h5 class="card-title">Classic White Tee</h5>
+              <p class="card-text">₱499 - Soft cotton comfort</p>
+              <p>A must-have staple in any wardrobe.</p>
+              <a href="product1.html" class="btn btn-outline-primary">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="Images/Urban Denim Jacket.jpg" class="card-img-top" alt="Jacket 1">
+            <div class="card-body">
+              <h5 class="card-title">Urban Denim Jacket</h5>
+              <p class="card-text">₱1,299 - Rugged streetwear</p>
+              <p>Durable and stylish for everyday layering.</p>
+              <a href="product2.html" class="btn btn-outline-primary">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card product-card">
+            <img src="Images/Slim Fit Joggers.jpg" class="card-img-top" alt="Pants 1">
+            <div class="card-body">
+              <h5 class="card-title">Slim Fit Joggers</h5>
+              <p class="card-text">₱799 - Perfect daily wear</p>
+              <p>Comfortable joggers for casual or gym wear.</p>
+              <a href="product3.html" class="btn btn-outline-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UrbanStyle - Meregillano Clothing Store. All rights reserved.</p>
+    <div class="Contact-container">
+      <a href="https://www.facebook.com/share/19HHUq9L3D/" target="_blank" class="social1-link me-3">ⓕ Facebook</a>
+      <a href="https://t.me/Cojackk" target="_blank" class="social2-link me-3">➢ Telegram</a>
+      <a href="https://m.me/meregillanoromel" target="_blank" class="social3-link">✉︎ Messenger</a>
+  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

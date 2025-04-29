@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - UrbanStyle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card-img-top {
+      height: 450px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="Images/Logo.jpg" alt="UrbanStyle Logo" width="40" height="40" class="me-2">
+        UrbanStyle - Meregillano Clothing Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+          <li class="nav-item"><a class="nav-link" href="account.html">My Account</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="bg-dark text-light text-center mb-5 py-2">All Products</h2>
+      <div class="row g-4">
+
+        <script>
+          const products = [
+            {name: 'Classic White Tee', price: 499, image: 'Images/Classic White Tee.jpg', description: 'A must-have staple in any wardrobe.'},
+            {name: 'Urban Denim Jacket', price: 1299, image: 'Images/Urban Denim Jacket.jpg', description: 'Durable and stylish for everyday layering.'},
+            {name: 'Slim Fit Joggers', price: 799, image: 'Images/Slim Fit Joggers.jpg', description: 'Comfortable joggers for casual or gym wear.'},
+            {name: 'Graphic Black Tee', price: 549, image: 'Images/Graphic Black Tee.jpg', description: 'Street-ready graphic print for bold looks.'},
+            {name: 'Streetwear Hoodie', price: 999, image: 'Images/Streetwear Hoodie.jpg', description: 'Soft hoodie with minimalist design.'},
+            {name: 'Retro Windbreaker', price: 1399, image: 'Images/Retro Windbreaker.jpg', description: 'Throwback style with modern comfort.'},
+            {name: 'Flannel Shirt', price: 599, image: 'Images/Flannel Shirt.jpg', description: 'Warm and soft — perfect for layering.'},
+            {name: 'Chino Pants', price: 849, image: 'Images/Chino Pants.jpg', description: 'Sleek chinos with stretch fit.'},
+            {name: 'Long Sleeve Tee', price: 649, image: 'Images/Long Sleeve Tee.jpg', description: 'Simple and clean everyday long sleeve.'},
+            {name: 'Casual Polo', price: 699, image: 'Images/Casual Polo.jpg', description: 'Smart-casual style for any day.'},
+            {name: 'Denim Shorts', price: 699, image: 'Images/Denim Shorts.jpg', description: 'Rugged denim with modern cut.'},
+            {name: 'Baseball Cap', price: 299, image: 'Images/Baseball Cap.jpg', description: 'Classic cap with adjustable strap.'},
+            {name: 'Canvas Backpack', price: 999, image: 'Images/Canvas Backpack.jpg', description: 'Durable bag for work or travel.'},
+            {name: 'Graphic Hoodie', price: 1049, image: 'Images/Graphic Hoodie.jpg', description: 'Bold prints, cozy fabric.'},
+            {name: 'Cargo Joggers', price: 899, image: 'Images/Cargo Joggers.jpg', description: 'Utility-inspired style meets comfort.'},
+            {name: 'Turtleneck Sweater', price: 799, image: 'Images/Turtleneck Sweater.jpg', description: 'Elevate your layering game.'},
+            {name: 'Bomber Jacket', price: 1499, image: 'Images/Bomber Jacket.jpg', description: 'Military-inspired outerwear classic.'},
+            {name: 'Vintage Overshirt', price: 1099, image: 'Images/Vintage Overshirt.jpg', description: 'Old-school texture and cut.'},
+            {name: 'Utility Vest', price: 1299, image: 'Images/Utility Vest.jpg', description: 'Multi-pocket vest with an edge.'},
+            {name: 'Relaxed Fit Jeans', price: 899, image: 'Images/Relaxed Fit Jeans.jpg', description: 'Comfy jeans with timeless appeal.'},
+            {name: 'Fleece Zip Jacket', price: 1199, image: 'Images/Fleece Zip Jacket.jpg', description: 'Warm fleece zip-up for cool days.'}
+          ];
+
+          function addToCart(name, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart.`);
+          }
+
+          document.write(products.map(p => `
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="${p.image}" class="card-img-top" alt="${p.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${p.name}</h5>
+                  <p class="card-text">₱${p.price}</p>
+                  <p class="card-text"><small>${p.description}</small></p>
+                  <button class="btn btn-primary w-100" onclick="addToCart('${p.name}', ${p.price})">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          `).join(''));
+        </script>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2025 UrbanStyle - Meregillano Clothing Store. All rights reserved.</p>
+    <div class="Contact-container">
+      <a href="https://www.facebook.com/share/19HHUq9L3D/" target="_blank" class="social1-link me-3">ⓕ Facebook</a>
+      <a href="https://t.me/Cojackk" target="_blank" class="social2-link me-3">➢ Telegram</a>
+      <a href="https://m.me/meregillanoromel" target="_blank" class="social3-link">✉︎ Messenger</a>
+  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
